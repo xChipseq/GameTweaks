@@ -1,5 +1,8 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources>
+    <!-- Tweaks Tab -->
+    <string name="TweakTabActiveTitle">Active Tweaks</string>
+    <string name="TweakTabSideTitle">Tweaks</string>
     <!-- Game Tweaks -->
     <string name="TweakAnomaly">Anomaly</string>
     <string name="TweakBrutalCrew">Brutal Crew</string>
