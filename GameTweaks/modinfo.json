@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Game Tweaks",
+  "Description": "ToUM addon that adds various fun game tweaks, enhancing the experience.",
+  "Tags": [
+    "tweak",
+    "modifier"
+  ],
+  "License": "GPLv3",
+  "Authors": ["Chipseq"],
+  "Links": {
+    "Source": "https://github.com/Chipseq/GameTweaks"
+  }
+}

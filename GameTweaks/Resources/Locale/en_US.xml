@@ -1,0 +1,47 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <!-- Game Tweaks -->
+    <string name="TweakAnomaly">Anomaly</string>
+    <string name="TweakBrutalCrew">Brutal Crew</string>
+    <string name="TweakChatWhispers">Chat Whispers</string>
+    <string name="TweakCompliantKillers">Compliant Killers</string>
+    <string name="TweakDivineIntervention">Divine Intervention</string>
+    <string name="TweakDontFearTheReaper">Don't Fear The Reaper</string>
+    <string name="TweakElection">Election</string>
+    <string name="TweakGraveyard">Graveyard</string>
+    <string name="TweakHauntedHouse">Haunted House</string>
+    <string name="TweakImpostoromicon">Impostoromicon</string>
+    <string name="TweakKeepingThemBusy">Keeping Them Busy</string>
+    <string name="TweakLiveVoting">Live Voting</string>
+    <string name="TweakMerryGoRound">Merry Go Round</string>
+    <string name="TweakNoSkip">No Skip</string>
+    <string name="TweakPerfectCrew">Perfect Crew</string>
+    <string name="TweakTacticalDeployment">Tactical Deployment</string>
+    <string name="TweakVip">VIP</string>
+    <!-- Text used by Whispers -->
+    <string name="TweakChatWhispersCmdTitle">Whispers</string>
+    <string name="TweakChatWhispersFrom">Whisper from \%name\%</string>
+    <string name="TweakChatWhispersTo">Whisper to \%name\%</string>
+    <string name="TweakChatWhispersNotification">\%source\% is whispering to \%target\%</string>
+    <string name="TweakChatWhispersHelp">You can use the \%b\%/whisper\%/b\% and \%b\%/w\%/b\% commands to privately message someone. Note that others will see you whispering! Use \%b\%/whelp\%/b\% for more information</string>
+    <string name="TweakChatWhispersHelpCmd">Use \%b\%/whisper\%/b\% or \%b\%/w\%/b\% to privately message someone.\%nl\%\%b\% /whisper {player} {message} \%/b\%\%nl\%Others will know that you whispered your target player.\%nl\%You can also use the player's number in the player argument - it follows the order of their nameplate during a meeting.</string>
+    <string name="TweakChatWhispersCmdError">Invalid number of arguments, command should follow: /whisper {player} {message}.</string>
+    <string name="TweakChatWhispersCmdNumError">Player \%b\%\%num\%\%/b\% does not exist. Numbers follow the order of nameplates during a meeting!</string>
+    <string name="TweakChatWhispersCmdNotFoundError">Player \%b\%\%player\%\%/b\% does not exist.</string>
+    <string name="TweakChatWhispersCmdWhisperYourself">You cannot whisper yourself. That would be weird.</string>
+    <string name="TweakChatWhispersCmdWhisperDead">Player \%b\%\%player\%\%/b\% is dead. Whispering a ghost sure works, but they probably won't be able to whisper you back.</string>
+    <!-- Text used by Election -->
+    <string name="TweakElectionTimer">Election ends in: \%timer\%s\%nl\%Player with the most votes wins.</string>
+    <string name="TweakElectionWin">\%player\% was elected as the Sovereign with \%votes\% votes!</string>
+    <stirng name="TweakElectionSovereignDesc">You've been elected as the Sovereign, permanently gaining +\%votes\% votes!</stirng>
+    <!-- Text used by Impostoromicon -->
+    <string name="TweakImpostoromiconVoteThemself">\%player\% has voted to pass the Impostoromicon to themselves.</string>
+    <string name="TweakImpostoromiconVoteMate">\%voter\% has voted to pass the Impostoromicon to %\player\%.</string>
+    <string name="TweakImpostoromiconGain">\%player\% now possesses the Impostoromicon, giving them ability to kill!</string>
+    <!-- Text used by VIP -->
+    <string name="TweakVipModifier">(VIP)</string>
+    <string name="TweakVipModifierDesc">You are a very important bean, the crew needs you alive.</string>
+    <string name="TweakVipCrewMurdered">The VIP was killed, causing all crewmates to die!</string>
+    <string name="TweakVipDisconnected">A new VIP has been selected.</string>
+    <string name="TweakVipGameOver">VIP died</string>
+</resources>
