@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace GameTweaks.Tweaks;
 
-public class ChatWhispersTweak : AbstractGameTweak
+public sealed class ChatWhispersTweak : AbstractGameTweak
 {
     public override string Name => TouLocale.Get("TweakChatWhispers");
     public override Color Color => TweakPalette.ChatWhispersColor;

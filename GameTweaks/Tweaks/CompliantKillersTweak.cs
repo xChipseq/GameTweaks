@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace GameTweaks.Tweaks;
 
-public class CompliantKillersTweak : AbstractGameTweak
+public sealed class CompliantKillersTweak : AbstractGameTweak
 {
     public override string Name => TouLocale.Get("TweakCompliantKillers");
     public override Color Color => TweakPalette.CompliantKillersColor;

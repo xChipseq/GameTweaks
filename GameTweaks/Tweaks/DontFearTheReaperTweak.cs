@@ -1,21 +1,24 @@
-﻿using GameTweaks.Options;
+﻿using GameTweaks.Buttons;
+using GameTweaks.Options;
+using HarmonyLib;
 using MiraAPI.Events;
 using MiraAPI.Events.Vanilla.Player;
 using MiraAPI.GameOptions;
+using MiraAPI.Hud;
+using MiraAPI.Utilities;
+using TownOfUs.Buttons;
+using TownOfUs.Modules;
 using TownOfUs.Modules.Localization;
 using UnityEngine;
 
 namespace GameTweaks.Tweaks;
 
-// TODO: Make dead players behave like haunter/phantom.
-// TODO: you could also make it actually work
+// This has so many edge cases and some buttons simply refuse to work with this system but hey, it's funny
 public sealed class DontFearTheReaperTweak : AbstractGameTweak
 {
     public override string Name => TouLocale.Get("TweakDontFearTheReaper");
     public override Color Color => TweakPalette.DontFearTheReaperColor;
     public override bool IsEnabled() => OptionGroupSingleton<TweaksOptions>.Instance.DontFearTheReaperTweak;
-
-    public static bool AbilitiesActive { get; set; }
 
     [RegisterEvent]
     public static void PlayerDeathEventHandler(PlayerDeathEvent @event)
@@ -33,6 +36,28 @@ public sealed class DontFearTheReaperTweak : AbstractGameTweak
             return;
         }
 
-        AbilitiesActive = true;
+        var role = PlayerControl.LocalPlayer.GetRoleWhenAlive();
+        foreach (var button in CustomButtonManager.Buttons.Shuffle())
+        {
+            if (button is IKillButton)
+            {
+                continue;
+            }
+            if (!button.Enabled(role))
+            {
+                continue;
+            }
+
+            var deathUsable = AccessTools.Property(button.GetType(), nameof(TownOfUsButton.UsableInDeath));
+            if (deathUsable != null && (bool)deathUsable.GetValue(button)!)
+            {
+                continue;
+            }
+
+            var afterlifeButton = CustomButtonSingleton<AfterlifeButton>.Instance;
+            afterlifeButton.MimicButton(button);
+            afterlifeButton.Used = false;
+            break;
+        }
     }
 }

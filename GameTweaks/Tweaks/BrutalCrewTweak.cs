@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace GameTweaks.Tweaks;
 
-public class BrutalCrewTweak : AbstractGameTweak
+public sealed class BrutalCrewTweak : AbstractGameTweak
 {
     public override string Name => TouLocale.Get("TweakBrutalCrew");
     public override Color Color => TweakPalette.BrutalCrewColor;
