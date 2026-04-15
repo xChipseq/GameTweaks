@@ -1,4 +1,5 @@
-﻿using BepInEx;
+﻿using System;
+using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
@@ -24,7 +25,8 @@ public partial class GameTweaksPlugin : BasePlugin, IMiraPlugin
     public string OptionsTitleText => "Game\nTweaks";
     public ConfigFile GetConfigFile() => Config;
 
-    public static bool DevMode => true;
+    public static bool IsMobile => Constants.GetPlatformType() is Platforms.Android or Platforms.IPhone;
+    public static bool DevMode => Version.Contains("ci", StringComparison.OrdinalIgnoreCase) || Version.Contains("dev", StringComparison.OrdinalIgnoreCase);
 
     public override void Load()
     {
