@@ -36,6 +36,17 @@ public sealed class AnomalyTweak : AbstractGameTweak
             return;
         }
 
+        Coroutines.Start(CoStart());
+    }
+
+    [MethodRpc((uint)TweakRpcCalls.AnomalySelectTweak)]
+    public static void RpcAnomalySelectTweak(PlayerControl player, ushort tweakId)
+    {
+        Coroutines.Start(CoSelectTweak(tweakId));
+    }
+
+    private static IEnumerator CoStart()
+    {
         var instance = GameTweaksManager.Instance!;
         var tweaks = GameTweaksManager.AllTweaks
             .Where(x => x is not AnomalyTweak && !instance.IsActive(x.Id))
@@ -43,7 +54,7 @@ public sealed class AnomalyTweak : AbstractGameTweak
         if (tweaks.Count == 0)
         {
             Warning("No valid tweaks found for Anomaly");
-            return;
+            yield break;
         }
 
         tweaks = tweaks.Shuffle().ToList();
@@ -62,14 +73,11 @@ public sealed class AnomalyTweak : AbstractGameTweak
             chance /= 2; // half the chance every time
         }
 
-        var local = PlayerControl.LocalPlayer;
-        selected.Do(x => RpcAnomalySelectTweak(local, x.Id));
-    }
-
-    [MethodRpc((uint)TweakRpcCalls.AnomalySelectTweak)]
-    public static void RpcAnomalySelectTweak(PlayerControl player, ushort tweakId)
-    {
-        Coroutines.Start(CoSelectTweak(tweakId));
+        while (!PlayerControl.LocalPlayer) // sometimes we're faster than the player for some reason
+        {
+            yield return null;
+        }
+        selected.Do(x => RpcAnomalySelectTweak(PlayerControl.LocalPlayer, x.Id));
     }
 
     private static IEnumerator CoSelectTweak(ushort tweakId)
