@@ -9,54 +9,54 @@ public sealed class TweaksOptions : AbstractOptionGroup
     public override string GroupName => "<b>Tweaks</b>";
     public override Color GroupColor => TweakPalette.ModColor;
 
-    [ModdedToggleOption("Anomaly")]
+    [ModdedToggleOption("TweakAnomalyOption")]
     public bool AnomalyTweak { get; set; } = false;
 
-    [ModdedToggleOption("Brutal Crew")]
+    [ModdedToggleOption("TweakBrutalCrewOption")]
     public bool BrutalCrewTweak { get; set; } = false;
 
-    [ModdedToggleOption("Chat Whispers")]
+    [ModdedToggleOption("TweakChatWhispersOption")]
     public bool ChatWhispersTweak { get; set; } = false;
 
-    [ModdedToggleOption("Compliant Killers")]
+    [ModdedToggleOption("TweakCompliantKillersOption")]
     public bool CompliantKillersTweak { get; set; } = false;
 
-    [ModdedToggleOption("Divine Intervention")]
+    [ModdedToggleOption("TweakDivineInterventionOption")]
     public bool DivineInterventionTweak { get; set; } = false;
 
-    [ModdedToggleOption("Don't Fear The Reaper")]
+    [ModdedToggleOption("TweakDontFearTheReaperOption")]
     public bool DontFearTheReaperTweak { get; set; } = false;
 
-    [ModdedToggleOption("Election")]
+    [ModdedToggleOption("TweakElectionOption")]
     public bool ElectionTweak { get; set; } = false;
 
-    [ModdedToggleOption("Graveyard")]
+    [ModdedToggleOption("TweakGraveyardOption")]
     public bool GraveyardTweak { get; set; } = false;
 
-    [ModdedToggleOption("Haunted House")]
+    [ModdedToggleOption("TweakHauntedHouseOption")]
     public bool HauntedHouseTweak { get; set; } = false;
 
-    [ModdedToggleOption("Impostoromicon")]
+    [ModdedToggleOption("TweakImpostoromiconOption")]
     public bool ImpostoromiconTweak { get; set; } = false;
 
-    // [ModdedToggleOption("Keeping Them Busy")]
+    // [ModdedToggleOption("TweakKeepingThemBusyOption")]
     // public bool KeepingThemBusyTweak { get; set; } = false;
 
-    [ModdedToggleOption("Live Voting")]
+    [ModdedToggleOption("TweakLiveVotingOption")]
     public bool LiveVotingTweak { get; set; } = false;
 
-    [ModdedToggleOption("Merry Go Round")]
+    [ModdedToggleOption("TweakMerryGoRoundOption")]
     public bool MerryGoRoundTweak { get; set; } = false;
 
-    [ModdedToggleOption("No Skip")]
+    [ModdedToggleOption("TweakNoSkipOption")]
     public bool NoSkipTweak { get; set; } = false;
 
-    [ModdedToggleOption("Perfect Crew")]
+    [ModdedToggleOption("TweakPerfectCrewOption")]
     public bool PerfectCrewTweak { get; set; } = false;
 
-    [ModdedToggleOption("Tactical Deployment")]
+    [ModdedToggleOption("TweakTacticalDeploymentOption")]
     public bool TacticalDeploymentTweak { get; set; } = false;
 
-    [ModdedToggleOption("VIP")]
+    [ModdedToggleOption("TweakVipOption")]
     public bool VipTweak { get; set; } = false;
 }

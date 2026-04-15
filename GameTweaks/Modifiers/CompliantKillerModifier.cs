@@ -18,7 +18,7 @@ public sealed class CompliantKillerModifier : AllianceGameModifier
         role.GetRoleAlignment() == RoleAlignment.NeutralKilling;
 
     public override string GetDescription() => "Work together with other neutral killers!";
-    public override bool HideOnUi => false;
+    public override bool HideOnUi => false; // TODO: hide this later
     public override bool CrewContinuesGame => false;
     public override AlliedFaction TrueFactionType => AlliedFaction.NeutralKiller;
 
@@ -33,7 +33,7 @@ public sealed class CompliantKillerModifier : AllianceGameModifier
                 other.AddModifier<CompliantRevealModifier>((ushort)other.Data.RoleType);
             }
         }
-        Warning($"{Player.Data.PlayerName} is added to the compliant killers team");
+        //Warning($"{Player.Data.PlayerName} is added to the compliant killers team");
     }
 
     public override void OnDeactivate()

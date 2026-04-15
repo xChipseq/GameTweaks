@@ -21,6 +21,24 @@
     <string name="TweakPerfectCrew">Perfect Crew</string>
     <string name="TweakTacticalDeployment">Tactical Deployment</string>
     <string name="TweakVip">VIP</string>
+    <!-- Tweak Options -->
+    <string name="TweakAnomalyOption">\%color=#00FF00\%Anomaly\%/color\%</string>
+    <string name="TweakBrutalCrewOption">\%color=#BC095D\%Brutal Crew\%/color\%</string>
+    <string name="TweakChatWhispersOption">\%color=#BC5322\%Chat Whispers\%/color\%</string>
+    <string name="TweakCompliantKillersOption">\%color=#001ABC\%Compliant Killers\%/color\%</string>
+    <string name="TweakDivineInterventionOption">\%color=#FFFB85\%Divine Intervention\%/color\%</string>
+    <string name="TweakDontFearTheReaperOption">\%color=#F03AFF\%Don't Fear The Reaper\%/color\%</string>
+    <string name="TweakElectionOption">\%color=#FFC725\%Election\%/color\%</string>
+    <string name="TweakGraveyardOption">\%color=#7A5835\%Graveyard\%/color\%</string>
+    <string name="TweakHauntedHouseOption">\%color=#46FF92\%Haunted House\%/color\%</string>
+    <string name="TweakImpostoromiconOption">\%color=#FF1919\%Impostoromicon\%/color\%</string>
+    <string name="TweakKeepingThemBusyOption">\%color=#FF914B\%Keeping Them Busy\%/color\%</string>
+    <string name="TweakLiveVotingOption">\%color=#8519FF\%Live Voting\%/color\%</string>
+    <string name="TweakMerryGoRoundOption">\%color=#FF412F\%Merry Go Round\%/color\%</string>
+    <string name="TweakNoSkipOption">\%color=#7F7F7F\%No Skip\%/color\%</string>
+    <string name="TweakPerfectCrewOption">\%color=#298B58\%Perfect Crew\%/color\%</string>
+    <string name="TweakTacticalDeploymentOption">\%color=#112E6E\%Tactical Deployment\%/color\%</string>
+    <string name="TweakVipOption">\%color=#42ECFF\%VIP\%/color\%</string>
     <!-- Text used by Whispers -->
     <string name="TweakChatWhispersCmdTitle">Whispers</string>
     <string name="TweakChatWhispersFrom">Whisper from \%name\%</string>
