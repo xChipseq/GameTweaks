@@ -6,7 +6,7 @@ The mod currently has **17** Tweaks for you to mess with, each one making the ga
 You can see the tweaks currently active during a game using the cog icon next to your task bar.
 
 ## Installation
-Find the [latest](https://github.com/xChipseq/ChaosTokens/releases/latest) release, download the `.dll` file.
+Find the [latest](https://github.com/xChipseq/GameTweaks/releases/latest) release, download the `.dll` file.
 
 Locate your mod folder and put the downloaded file into the `BepInEx/plugins` folder.
 
