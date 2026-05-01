@@ -9,7 +9,7 @@ namespace GameTweaks.Patches;
 public static class ToumNamePatches
 {
     [HarmonyPrefix]
-    [HarmonyPatch(typeof(PlayerRoleTextExtensions), nameof(PlayerRoleTextExtensions.UpdateStatusSymbols))]
+    [HarmonyPatch(typeof(PlayerRoleTextExtensions), nameof(PlayerRoleTextExtensions.UpdateStatusSymbols), typeof(string), typeof(PlayerControl), typeof(DataVisibility))]
     public static void UpdateStatusSymbolsPrefix(ref string name, PlayerControl player)
     {
         if (player.HasModifier<SovereignModifier>())
