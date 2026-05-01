@@ -56,7 +56,7 @@ public sealed class VipTweak : AbstractGameTweak
             .ToList();
         if (possiblePlayers.Count == 0)
         {
-            Warning("No valid players found for VIP");
+            Error("No valid players found for VIP");
             return;
         }
 

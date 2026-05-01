@@ -71,7 +71,7 @@ public sealed class TacticalDeploymentTweak : AbstractGameTweak
         var map = MiscUtils.GetCurrentMap;
         if (!Positions.TryGetValue(map, out var list) || list.Length == 0)
         {
-            Warning($"{map} is not valid Tactical Deployment");
+            Error($"{map} is not valid Tactical Deployment");
             yield break;
         }
 

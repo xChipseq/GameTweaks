@@ -26,7 +26,7 @@ public partial class GameTweaksPlugin : BasePlugin, IMiraPlugin
     public ConfigFile GetConfigFile() => Config;
 
     public static bool IsMobile => Constants.GetPlatformType() is Platforms.Android or Platforms.IPhone;
-    public static bool DevMode => Version.Contains("ci", StringComparison.OrdinalIgnoreCase) || Version.Contains("dev", StringComparison.OrdinalIgnoreCase);
+    public static bool DevMode => false;
 
     public override void Load()
     {

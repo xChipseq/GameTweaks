@@ -53,7 +53,7 @@ public sealed class AnomalyTweak : AbstractGameTweak
             .ToList();
         if (tweaks.Count == 0)
         {
-            Warning("No valid tweaks found for Anomaly");
+            Error("No valid tweaks found for Anomaly");
             yield break;
         }
 
@@ -102,6 +102,5 @@ public sealed class AnomalyTweak : AbstractGameTweak
         }
 
         instance.AddTweak(tweak);
-        Warning($"RpcAnomalySelectTweak: Selected {tweakId}");
     }
 }

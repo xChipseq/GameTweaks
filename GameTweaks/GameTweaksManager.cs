@@ -24,7 +24,6 @@ public class GameTweaksManager(IntPtr cppPtr) : MonoBehaviour(cppPtr)
     void Start()
     {
         Instance = this;
-        Warning("GameTweaksManager created");
         foreach (var (_, type) in TweakTypes)
         {
             var tweak = CreateTweak(type);

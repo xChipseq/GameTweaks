@@ -44,7 +44,6 @@ public sealed class ElectionTweak : AbstractGameTweak
             return;
         }
 
-        Warning("Election enabled");
         currentlyElection = true;
     }
 
