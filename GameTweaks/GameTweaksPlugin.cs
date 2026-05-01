@@ -33,6 +33,6 @@ public partial class GameTweaksPlugin : BasePlugin, IMiraPlugin
         Harmony.PatchAll();
         GameTweaksManager.RegisterTweaks(GetType().Assembly);
         TweakLocale.SearchInternalLocale();
-        ReactorCredits.Register(Name, Version, DevMode, ReactorCredits.AlwaysShow);
+        ReactorCredits.Register<GameTweaksPlugin>(ReactorCredits.AlwaysShow);
     }
 }
