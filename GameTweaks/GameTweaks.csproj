@@ -6,13 +6,13 @@
         <Nullable>enable</Nullable>
 
         <Authors>Chipseq</Authors>
-        <VersionPrefix>1.0.0</VersionPrefix>
+        <VersionPrefix>1.0.1</VersionPrefix>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="TownOfUsMira" Version="1.6.0" />
-        <PackageReference Include="AllOfUs.MiraAPI" Version="0.3.9"/>
-        <PackageReference Include="Reactor" Version="2.5.0-ci.371"/>
+        <PackageReference Include="TownOfUsMira" Version="1.7.1" />
+        <PackageReference Include="AllOfUs.MiraAPI" Version="0.4.3" />
+        <PackageReference Include="Reactor" Version="2.5.1-ci.384" />
         <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.735" Private="false" ExcludeAssets="runtime;native"/>
         <PackageReference Include="AmongUs.GameLibs.Steam" Version="2025.4.15" PrivateAssets="all"/>
 
