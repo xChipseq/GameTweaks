@@ -2,8 +2,8 @@
 using System.Linq;
 using GameTweaks.Tweaks;
 using HarmonyLib;
+using MiraAPI.Translation;
 using MiraAPI.Utilities;
-using TownOfUs.Modules.Localization;
 using TownOfUs.Patches.Misc;
 using TownOfUs.Utilities;
 
@@ -55,8 +55,8 @@ public static class ChatWhispersPatch
         var split = text.Split(' ', 3);
         if (HELP_COMMANDS.Any(x => split[0].Equals(x, StringComparison.InvariantCultureIgnoreCase)))
         {
-            var helpMsg = TouLocale.GetParsed("TweakChatWhispersHelpCmd");
-            MiscUtils.AddSystemChat(local, TouLocale.Get("TweakChatWhispersCmdTitle"), helpMsg, altColors: true);
+            var helpMsg = MiraLocaleManager.Get("TweakChatWhispersHelpCmd");
+            MiscUtils.AddSystemChat(local, MiraLocaleManager.Get("TweakChatWhispersCmdTitle"), helpMsg, altColors: true);
             Finalize();
             __result = false;
             return;
@@ -69,8 +69,8 @@ public static class ChatWhispersPatch
         __result = false;
         if (split.Length != 3)
         {
-            var errorMsg = TouLocale.GetParsed("TweakChatWhispersCmdError");
-            MiscUtils.AddSystemChat(local, TouLocale.Get("TweakChatWhispersCmdTitle"), errorMsg, altColors: true);
+            var errorMsg = MiraLocaleManager.Get("TweakChatWhispersCmdError");
+            MiscUtils.AddSystemChat(local, MiraLocaleManager.Get("TweakChatWhispersCmdTitle"), errorMsg, altColors: true);
             Finalize();
             return;
         }
@@ -82,12 +82,12 @@ public static class ChatWhispersPatch
             var states = MeetingHud.Instance.playerStates.ToArray();
             var sorted = states // snippet from au's source that sorts buttons (the states array isnt actually sorted)
                 .OrderBy(p => !p.AmDead ? 0 : 50)
-                .ThenBy(p => p.TargetPlayerId).ToArray<PlayerVoteArea>();
+                .ThenBy(p => p.PlayerId).ToArray<PlayerVoteArea>();
 
             if (number > states.Length)
             {
-                var numErrorMsg = TouLocale.GetParsed("TweakChatWhispersCmdNumError").Replace("<num>", number.ToString());
-                MiscUtils.AddSystemChat(local, TouLocale.Get("TweakChatWhispersCmdTitle"), numErrorMsg, altColors: true);
+                var numErrorMsg = MiraLocaleManager.Get("TweakChatWhispersCmdNumError").Replace("<num>", number.ToString());
+                MiscUtils.AddSystemChat(local, MiraLocaleManager.Get("TweakChatWhispersCmdTitle"), numErrorMsg, altColors: true);
                 Finalize();
                 return;
             }
@@ -102,8 +102,8 @@ public static class ChatWhispersPatch
                                      x.Data.PlayerName.StartsWith(playerArg, StringComparison.InvariantCultureIgnoreCase));
             if (player == null)
             {
-                var notFoundErrorMsg = TouLocale.GetParsed("TweakChatWhispersCmdNotFoundError").Replace("<player>", playerArg);
-                MiscUtils.AddSystemChat(local, TouLocale.Get("TweakChatWhispersCmdTitle"), notFoundErrorMsg, altColors: true);
+                var notFoundErrorMsg = MiraLocaleManager.Get("TweakChatWhispersCmdNotFoundError").Replace("<player>", playerArg);
+                MiscUtils.AddSystemChat(local, MiraLocaleManager.Get("TweakChatWhispersCmdTitle"), notFoundErrorMsg, altColors: true);
                 Finalize();
                 return;
             }
@@ -114,14 +114,14 @@ public static class ChatWhispersPatch
         Finalize();
         if (target.AmOwner)
         {
-            MiscUtils.AddSystemChat(local, TouLocale.Get("TweakChatWhispersCmdTitle"), TouLocale.GetParsed("TweakChatWhispersCmdWhisperYourself"), altColors: true);
+            MiscUtils.AddSystemChat(local, MiraLocaleManager.Get("TweakChatWhispersCmdTitle"), MiraLocaleManager.Get("TweakChatWhispersCmdWhisperYourself"), altColors: true);
             return;
         }
 
         if (target.HasDied())
         {
-            var deadErrorMsg = TouLocale.GetParsed("TweakChatWhispersCmdWhisperDead").Replace("<player>", target.Data.PlayerName);
-            MiscUtils.AddSystemChat(local, TouLocale.Get("TweakChatWhispersCmdTitle"), deadErrorMsg, altColors: true);
+            var deadErrorMsg = MiraLocaleManager.Get("TweakChatWhispersCmdWhisperDead").Replace("<player>", target.Data.PlayerName);
+            MiscUtils.AddSystemChat(local, MiraLocaleManager.Get("TweakChatWhispersCmdTitle"), deadErrorMsg, altColors: true);
             return;
         }
 

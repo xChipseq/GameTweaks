@@ -5,10 +5,10 @@ using MiraAPI.Events;
 using MiraAPI.Events.Vanilla.Player;
 using MiraAPI.GameOptions;
 using MiraAPI.Hud;
+using MiraAPI.Translation;
 using MiraAPI.Utilities;
 using TownOfUs.Buttons;
 using TownOfUs.Modules;
-using TownOfUs.Modules.Localization;
 using UnityEngine;
 
 namespace GameTweaks.Tweaks;
@@ -16,7 +16,7 @@ namespace GameTweaks.Tweaks;
 // This has so many edge cases and some buttons simply refuse to work with this system but hey, it's funny
 public sealed class DontFearTheReaperTweak : AbstractGameTweak
 {
-    public override string Name => TouLocale.Get("TweakDontFearTheReaper");
+    public override string Name => MiraLocaleManager.Get("TweakDontFearTheReaper");
     public override Color Color => TweakPalette.DontFearTheReaperColor;
     public override bool IsEnabled() => OptionGroupSingleton<TweaksOptions>.Instance.DontFearTheReaperTweak;
 

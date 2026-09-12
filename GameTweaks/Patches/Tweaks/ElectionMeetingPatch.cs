@@ -6,11 +6,11 @@ using GameTweaks.Utilities;
 using HarmonyLib;
 using MiraAPI.Modifiers;
 using MiraAPI.Roles;
+using MiraAPI.Translation;
 using MiraAPI.Utilities;
 using MiraAPI.Voting;
 using Reactor.Utilities.Extensions;
 using TownOfUs.Modifiers.Crewmate;
-using TownOfUs.Modules.Localization;
 using TownOfUs.Roles.Crewmate;
 using UnityEngine;
 
@@ -36,11 +36,11 @@ public static class ElectionMeetingPatch
         __instance.SkipVoteButton.gameObject.SetActive(false);
         CustomRoleUtils.GetActiveRolesOfType<ProsecutorRole>().Do(x => x.HideProsButton = true);
         var options = GameManager.Instance.LogicOptions.TryCast<LogicOptionsNormal>()!;
-        if (__instance.state is MeetingHud.VoteStates.NotVoted or MeetingHud.VoteStates.Voted)
+        if (__instance.state is MeetingHud.MeetingStates.NotVoted or MeetingHud.MeetingStates.Voted)
         {
             var num2 = __instance.discussionTimer - options.GetDiscussionTime();
             var num3 = Mathf.Max(0f, ElectionTweak.ElectionTime - num2);
-            __instance.TimerText.text = TouLocale.GetParsed("TweakElectionTimer").Replace("<timer>", Mathf.CeilToInt(num3).ToString());
+            __instance.TimerText.text = MiraLocaleManager.Get("TweakElectionTimer").Replace("<timer>", Mathf.CeilToInt(num3).ToString());
             if (num2 >= ElectionTweak.ElectionTime)
             {
                 ElectionTweak.currentlyElection = false;
@@ -74,15 +74,16 @@ public static class ElectionMeetingPatch
 
                     var dummy = x.GetComponent<DummyBehaviour>();
                     if (dummy) dummy.voted = false;
+                    
+                    __instance.ClearVote(x.PlayerId, x.AmOwner);
                 });
-                __instance.ClearVote();
                 CustomRoleUtils.GetActiveRolesOfType<ProsecutorRole>().Do(x =>
                 {
                     if (!x.Player.HasModifier<JailedModifier>())
                         x.HideProsButton = false;
                 });
 
-                var winMsg = TouLocale.GetParsed("TweakElectionWin")
+                var winMsg = MiraLocaleManager.Get("TweakElectionWin")
                     .Replace("<player>", player!.Data.PlayerName)
                     .Replace("<votes>", top.Value.ToString(CultureInfo.InvariantCulture));
                 TweakHelpers.Notify(winMsg,

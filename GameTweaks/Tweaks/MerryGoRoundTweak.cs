@@ -5,7 +5,7 @@ using GameTweaks.Utilities;
 using MiraAPI.Events;
 using MiraAPI.Events.Vanilla.Gameplay;
 using MiraAPI.GameOptions;
-using TownOfUs.Modules.Localization;
+using MiraAPI.Translation;
 using TownOfUs.Utilities;
 using UnityEngine;
 
@@ -13,7 +13,7 @@ namespace GameTweaks.Tweaks;
 
 public sealed class MerryGoRoundTweak : AbstractGameTweak
 {
-    public override string Name => TouLocale.Get("TweakMerryGoRound");
+    public override string Name => MiraLocaleManager.Get("TweakMerryGoRound");
     public override Color Color => TweakPalette.MerryGoRoundColor;
     public override bool IsEnabled() => OptionGroupSingleton<TweaksOptions>.Instance.MerryGoRoundTweak;
 

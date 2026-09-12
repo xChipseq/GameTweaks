@@ -4,7 +4,7 @@ using System.Linq;
 using GameTweaks.Components;
 using GameTweaks.Options;
 using MiraAPI.GameOptions;
-using TownOfUs.Modules.Localization;
+using MiraAPI.Translation;
 using TownOfUs.Utilities;
 using UnityEngine;
 
@@ -12,7 +12,7 @@ namespace GameTweaks.Tweaks;
 
 public sealed class TacticalDeploymentTweak : AbstractGameTweak
 {
-    public override string Name => TouLocale.Get("TweakTacticalDeployment");
+    public override string Name => MiraLocaleManager.Get("TweakTacticalDeployment");
     public override Color Color => TweakPalette.TacticalDeploymentColor;
     public override bool IsEnabled() => OptionGroupSingleton<TweaksOptions>.Instance.TacticalDeploymentTweak;
 

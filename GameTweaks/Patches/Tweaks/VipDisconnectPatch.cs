@@ -3,7 +3,7 @@ using GameTweaks.Tweaks;
 using GameTweaks.Utilities;
 using HarmonyLib;
 using MiraAPI.Modifiers;
-using TownOfUs.Modules.Localization;
+using MiraAPI.Translation;
 
 namespace GameTweaks.Patches.Tweaks;
 
@@ -25,6 +25,6 @@ public class VipDisconnectPatch
 
         if (AmongUsClient.Instance.AmHost)
             VipTweak.PickVip();
-        TweakHelpers.Notify(TouLocale.Get("TweakVipDisconnected"), TweakPalette.VipColor);
+        TweakHelpers.Notify(MiraLocaleManager.Get("TweakVipDisconnected"), TweakPalette.VipColor);
     }
 }

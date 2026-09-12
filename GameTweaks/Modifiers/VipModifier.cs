@@ -1,7 +1,7 @@
 ﻿using AmongUs.GameOptions;
 using MiraAPI.GameOptions;
+using MiraAPI.Translation;
 using TownOfUs.Modifiers;
-using TownOfUs.Modules.Localization;
 using TownOfUs.Options;
 using TownOfUs.Utilities;
 
@@ -14,11 +14,11 @@ public sealed class VipModifier(ushort roleType) : RevealModifier((int)ChangeRol
     public override bool RevealRole => Player.AmOwner || PlayerControl.LocalPlayer.IsCrewmate()
                                                       || (PlayerControl.LocalPlayer.HasDied() &&
                                                           OptionGroupSingleton<GeneralOptions>.Instance.TheDeadKnow);
-    public override string GetDescription() => TouLocale.Get("TweakVipModifierDesc");
+    public override string GetDescription() => MiraLocaleManager.Get("TweakVipModifierDesc");
 
     public override void Update()
     {
         base.Update();
-        ExtraRoleText = RevealRole ? $" {TweakPalette.VipColor.ToTextColor()}{TouLocale.Get("TweakVipModifier")}</color>" : string.Empty;
+        ExtraRoleText = RevealRole ? $" {TweakPalette.VipColor.ToTextColor()}{MiraLocaleManager.Get("TweakVipModifier")}</color>" : string.Empty;
     }
 }

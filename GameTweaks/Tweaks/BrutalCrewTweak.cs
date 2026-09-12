@@ -4,8 +4,8 @@ using MiraAPI.Events;
 using MiraAPI.Events.Vanilla.Gameplay;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
+using MiraAPI.Translation;
 using TownOfUs.Events.TouEvents;
-using TownOfUs.Modules.Localization;
 using TownOfUs.Utilities;
 using UnityEngine;
 
@@ -13,7 +13,7 @@ namespace GameTweaks.Tweaks;
 
 public sealed class BrutalCrewTweak : AbstractGameTweak
 {
-    public override string Name => TouLocale.Get("TweakBrutalCrew");
+    public override string Name => MiraLocaleManager.Get("TweakBrutalCrew");
     public override Color Color => TweakPalette.BrutalCrewColor;
     public override bool IsEnabled() => OptionGroupSingleton<TweaksOptions>.Instance.BrutalCrewTweak;
 

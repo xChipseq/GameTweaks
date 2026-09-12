@@ -10,13 +10,13 @@ using MiraAPI.Events.Vanilla.Meeting;
 using MiraAPI.Events.Vanilla.Meeting.Voting;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
+using MiraAPI.Translation;
 using MiraAPI.Utilities;
 using Reactor.Networking.Attributes;
 using Reactor.Utilities.Extensions;
 using TMPro;
 using TownOfUs.Events.TouEvents;
 using TownOfUs.Modules;
-using TownOfUs.Modules.Localization;
 using TownOfUs.Utilities;
 using UnityEngine;
 
@@ -24,7 +24,7 @@ namespace GameTweaks.Tweaks;
 
 public sealed class ImpostoromiconTweak : AbstractGameTweak
 {
-    public override string Name => TouLocale.Get("TweakImpostoromicon");
+    public override string Name => MiraLocaleManager.Get("TweakImpostoromicon");
     public override Color Color => TweakPalette.ImpostoromiconColor;
     public override bool IsEnabled() => OptionGroupSingleton<TweaksOptions>.Instance.ImpostoromiconTweak;
 
@@ -176,8 +176,8 @@ public sealed class ImpostoromiconTweak : AbstractGameTweak
         {
             TweakHelpers.Notify(
                 voter == target
-                    ? TouLocale.GetParsed("TweakImpostoromiconVoteThemself").Replace("<player>", voter.Data.PlayerName)
-                    : TouLocale.Get("TweakImpostoromiconVoteMate")
+                    ? MiraLocaleManager.Get("TweakImpostoromiconVoteThemself").Replace("<player>", voter.Data.PlayerName)
+                    : MiraLocaleManager.Get("TweakImpostoromiconVoteMate")
                         .Replace("<voter>", voter.Data.PlayerName)
                         .Replace("<player>", target.Data.PlayerName),
                 TweakPalette.ImpostoromiconColor);
@@ -204,7 +204,7 @@ public sealed class ImpostoromiconTweak : AbstractGameTweak
         if (PlayerControl.LocalPlayer.IsImpostorAligned())
         {
             TweakHelpers.Notify(
-                TouLocale.GetParsed("TweakImpostoromiconGain").Replace("<player>", holder.Data.PlayerName),
+                MiraLocaleManager.Get("TweakImpostoromiconGain").Replace("<player>", holder.Data.PlayerName),
                 TweakPalette.ImpostoromiconColor);
         }
     }

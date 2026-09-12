@@ -6,10 +6,10 @@ using Cpp2IL.Core.Extensions;
 using GameTweaks.Options;
 using HarmonyLib;
 using MiraAPI.GameOptions;
+using MiraAPI.Translation;
 using MiraAPI.Utilities;
 using Reactor.Networking.Attributes;
 using Reactor.Utilities;
-using TownOfUs.Modules.Localization;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -17,7 +17,7 @@ namespace GameTweaks.Tweaks;
 
 public sealed class AnomalyTweak : AbstractGameTweak
 {
-    public override string Name => TouLocale.Get("TweakAnomaly");
+    public override string Name => MiraLocaleManager.Get("TweakAnomaly");
     public override Color Color => TweakPalette.AnomalyColor;
     public override bool IsEnabled() => OptionGroupSingleton<TweaksOptions>.Instance.AnomalyTweak;
 

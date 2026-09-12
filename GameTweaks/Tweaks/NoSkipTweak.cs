@@ -3,15 +3,15 @@ using GameTweaks.Utilities;
 using MiraAPI.Events;
 using MiraAPI.Events.Vanilla.Meeting.Voting;
 using MiraAPI.GameOptions;
+using MiraAPI.Translation;
 using TMPro;
-using TownOfUs.Modules.Localization;
 using UnityEngine;
 
 namespace GameTweaks.Tweaks;
 
 public sealed class NoSkipTweak : AbstractGameTweak
 {
-    public override string Name => TouLocale.Get("TweakNoSkip");
+    public override string Name => MiraLocaleManager.Get("TweakNoSkip");
     public override Color Color => TweakPalette.NoSkipColor;
     public override bool IsEnabled() => OptionGroupSingleton<TweaksOptions>.Instance.NoSkipTweak;
 

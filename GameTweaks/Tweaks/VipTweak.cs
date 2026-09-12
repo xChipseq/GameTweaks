@@ -12,12 +12,12 @@ using MiraAPI.GameEnd;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 using MiraAPI.Roles;
+using MiraAPI.Translation;
 using Reactor.Utilities;
 using Reactor.Utilities.Extensions;
 using TownOfUs.Modifiers.Game.Alliance;
 using TownOfUs.Modifiers.Neutral;
 using TownOfUs.Modules;
-using TownOfUs.Modules.Localization;
 using TownOfUs.Roles.Crewmate;
 using TownOfUs.Roles.Neutral;
 using TownOfUs.Utilities;
@@ -27,7 +27,7 @@ namespace GameTweaks.Tweaks;
 
 public sealed class VipTweak : AbstractGameTweak
 {
-    public override string Name => TouLocale.Get("TweakVip");
+    public override string Name => MiraLocaleManager.Get("TweakVip");
     public override Color Color => TweakPalette.VipColor;
     public override bool IsEnabled() => OptionGroupSingleton<TweaksOptions>.Instance.VipTweak;
 
@@ -135,7 +135,7 @@ public sealed class VipTweak : AbstractGameTweak
 
         // otherwise, we once again brutally murder the crew
         TweakHelpers.MurderAllCrew();
-        TweakHelpers.Notify(TouLocale.Get("TweakVipCrewMurdered"), Palette.ImpostorRed);
+        TweakHelpers.Notify(MiraLocaleManager.Get("TweakVipCrewMurdered"), Palette.ImpostorRed);
     }
 
     private static IEnumerator CoVipDeadWin(NetworkedPlayerInfo[] winners)

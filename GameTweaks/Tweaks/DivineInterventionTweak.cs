@@ -3,17 +3,17 @@ using GameTweaks.Options;
 using MiraAPI.Events;
 using MiraAPI.Events.Vanilla.Gameplay;
 using MiraAPI.GameOptions;
+using MiraAPI.Translation;
 using MiraAPI.Utilities;
 using Reactor.Networking.Attributes;
 using Reactor.Utilities.Extensions;
-using TownOfUs.Modules.Localization;
 using UnityEngine;
 
 namespace GameTweaks.Tweaks;
 
 public sealed class DivineInterventionTweak : AbstractGameTweak
 {
-    public override string Name => TouLocale.Get("TweakDivineIntervention");
+    public override string Name => MiraLocaleManager.Get("TweakDivineIntervention");
     public override Color Color => TweakPalette.DivineInterventionColor;
     public override bool IsEnabled() => OptionGroupSingleton<TweaksOptions>.Instance.DivineInterventionTweak;
 

@@ -1,4 +1,5 @@
 ﻿using MiraAPI.Modifiers;
+using MiraAPI.Translation;
 using TownOfUs.Modules.Localization;
 
 namespace GameTweaks.Modifiers;
@@ -8,7 +9,7 @@ public sealed class SovereignModifier(int votes) : BaseModifier
     public override string ModifierName => "Sovereign";
     public override bool HideOnUi => false;
     public override string GetDescription() =>
-        TouLocale.GetParsed("TweakElectionSovereignDesc").Replace("<votes>", VoteCount.ToString());
+        MiraLocaleManager.Get("TweakElectionSovereignDesc").Replace("<votes>", VoteCount.ToString());
 
     public readonly int VoteCount = votes;
 

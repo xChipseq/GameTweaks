@@ -4,8 +4,8 @@ using MiraAPI.Events;
 using MiraAPI.Events.Vanilla.Gameplay;
 using MiraAPI.Events.Vanilla.Meeting;
 using MiraAPI.GameOptions;
+using MiraAPI.Translation;
 using Reactor.Networking.Attributes;
-using TownOfUs.Modules.Localization;
 using TownOfUs.Utilities;
 using UnityEngine;
 
@@ -13,7 +13,7 @@ namespace GameTweaks.Tweaks;
 
 public sealed class ChatWhispersTweak : AbstractGameTweak
 {
-    public override string Name => TouLocale.Get("TweakChatWhispers");
+    public override string Name => MiraLocaleManager.Get("TweakChatWhispers");
     public override Color Color => TweakPalette.ChatWhispersColor;
     public override bool IsEnabled() => OptionGroupSingleton<TweaksOptions>.Instance.ChatWhispersTweak;
 
@@ -22,7 +22,7 @@ public sealed class ChatWhispersTweak : AbstractGameTweak
     [MethodRpc((uint)TweakRpcCalls.ChatWhispersWhisper)]
     public static void RpcWhisperPlayer(PlayerControl source, PlayerControl target, string message)
     {
-        var msg = TouLocale.GetParsed("TweakChatWhispersNotification")
+        var msg = MiraLocaleManager.Get("TweakChatWhispersNotification")
             .Replace("<source>", source.Data.PlayerName)
             .Replace("<target>", target.Data.PlayerName);
         TweakHelpers.SendCustomChatNote(source.Data, msg, true);
@@ -32,8 +32,8 @@ public sealed class ChatWhispersTweak : AbstractGameTweak
         }
 
         var nameText = source.AmOwner
-            ? TouLocale.GetParsed("TweakChatWhispersTo").Replace("<name>", target.Data.PlayerName)
-            : TouLocale.GetParsed("TweakChatWhispersFrom").Replace("<name>", source.Data.PlayerName);
+            ? MiraLocaleManager.Get("TweakChatWhispersTo").Replace("<name>", target.Data.PlayerName)
+            : MiraLocaleManager.Get("TweakChatWhispersFrom").Replace("<name>", source.Data.PlayerName);
         MiscUtils.AddFakeChat(source.Data, nameText, message, altColors: true, onLeft: target.AmOwner);
     }
 
@@ -63,7 +63,7 @@ public sealed class ChatWhispersTweak : AbstractGameTweak
 
         MiscUtils.AddSystemChat(local.Data,
             "Whispers",
-            TouLocale.GetParsed("TweakChatWhispersHelp"),
+            MiraLocaleManager.Get("TweakChatWhispersHelp"),
             altColors: true);
         shownOnce = true;
     }

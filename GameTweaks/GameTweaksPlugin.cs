@@ -5,6 +5,7 @@ using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
 using MiraAPI;
 using MiraAPI.PluginLoading;
+using MiraAPI.Translation;
 using Reactor;
 using Reactor.Networking;
 using Reactor.Networking.Attributes;
@@ -31,8 +32,8 @@ public partial class GameTweaksPlugin : BasePlugin, IMiraPlugin
     public override void Load()
     {
         Harmony.PatchAll();
+        MiraLocaleManager.Register(Id);
         GameTweaksManager.RegisterTweaks(GetType().Assembly);
-        TweakLocale.SearchInternalLocale();
         ReactorCredits.Register<GameTweaksPlugin>(ReactorCredits.AlwaysShow);
     }
 }

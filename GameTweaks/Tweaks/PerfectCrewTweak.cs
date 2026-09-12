@@ -4,14 +4,14 @@ using MiraAPI.Events;
 using MiraAPI.Events.Vanilla.Gameplay;
 using MiraAPI.Events.Vanilla.Player;
 using MiraAPI.GameOptions;
-using TownOfUs.Modules.Localization;
+using MiraAPI.Translation;
 using UnityEngine;
 
 namespace GameTweaks.Tweaks;
 
 public sealed class PerfectCrewTweak : AbstractGameTweak
 {
-    public override string Name => TouLocale.Get("TweakPerfectCrew");
+    public override string Name => MiraLocaleManager.Get("TweakPerfectCrew");
     public override Color Color => TweakPalette.PerfectCrewColor;
     public override bool IsEnabled() => OptionGroupSingleton<TweaksOptions>.Instance.PerfectCrewTweak;
 

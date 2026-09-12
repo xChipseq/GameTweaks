@@ -2,10 +2,10 @@
 using GameTweaks.Modifiers;
 using MiraAPI.GameEnd;
 using MiraAPI.Modifiers;
+using MiraAPI.Translation;
 using MiraAPI.Utilities;
 using Reactor.Utilities.Extensions;
 using TownOfUs.Modules;
-using TownOfUs.Modules.Localization;
 using TownOfUs.Roles.Neutral;
 using TownOfUs.Utilities;
 using UnityEngine;
@@ -53,12 +53,12 @@ public sealed class VipDeadGameOver : CustomGameOver
         endGameManager.BackgroundBar.material.SetColor(ShaderID.Color, winnerColor);
 
         var text = Object.Instantiate(endGameManager.WinText);
-        var winText = soloWinner ? TouLocale.GetParsed("SoloWin") : TouLocale.GetParsed("TeamWin");
-        var vipGameOverText = TouLocale.Get("TweakVipGameOver");
+        var winText = soloWinner ? MiraLocaleManager.Get("SoloWin") : MiraLocaleManager.Get("TeamWin");
+        var vipGameOverText = MiraLocaleManager.Get("TweakVipGameOver");
         winText = winText.Replace("<role>", winningTeam);
         text.text = $"{TweakPalette.VipColor.ToTextColor()}{vipGameOverText}</color>\n{winText}!";
         text.color = winnerColor;
-        GameHistory.WinningFaction = $"{TweakPalette.VipColor.ToTextColor()}{vipGameOverText}</color> - <color=#{winnerColor.ToHtmlStringRGBA()}>{TouLocale.GetParsed("TeamWin").Replace("<role>", winningTeam)}</color>";
+        GameHistory.WinningFaction = $"{TweakPalette.VipColor.ToTextColor()}{vipGameOverText}</color> - <color=#{winnerColor.ToHtmlStringRGBA()}>{MiraLocaleManager.Get("TeamWin").Replace("<role>", winningTeam)}</color>";
 
         endGameManager.WinText.transform.localPosition = new Vector3(0, 2f, -14);
         var pos = endGameManager.WinText.transform.localPosition;

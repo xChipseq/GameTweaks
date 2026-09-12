@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using System.Text;
 using HarmonyLib;
+using MiraAPI.Translation;
 using Reactor.Utilities.Extensions;
 using TMPro;
-using TownOfUs.Modules.Localization;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -67,7 +67,7 @@ public static class TweaksTabPatches
         {
             tweaksInfoButton?.gameObject.SetActive(true);
             var ordered = manager.ActiveTweaks.OrderBy(x => x.Name).ToArray();
-            var builder = new StringBuilder($"<b>{TouLocale.Get("TweakTabActiveTitle")}</b>\n");
+            var builder = new StringBuilder($"<b>{MiraLocaleManager.Get("TweakTabActiveTitle")}</b>\n");
             foreach (var tweak in ordered)
             {
                 builder.Append($"<color=#{tweak.Color.ToHtmlStringRGBA()}>{tweak.Name}</color>");
@@ -81,7 +81,7 @@ public static class TweaksTabPatches
         // we need to patch this whole method to make it compute both text sizes smh
         tweaksTaskText!.gameObject.SetActive(infoPanel);
         if (infoPanel)
-            __instance.tab.GetComponentInChildren<TextMeshPro>().text = TouLocale.Get("TweakTabSideTitle");
+            __instance.tab.GetComponentInChildren<TextMeshPro>().text = MiraLocaleManager.Get("TweakTabSideTitle");
         __instance.taskText.gameObject.SetActive(!infoPanel);
         var text = infoPanel && tweaksTaskText != null ? tweaksTaskText : __instance.taskText;
         __instance.background.transform.localScale = ((text.textBounds.size.x > 0f) ? new Vector3(text.textBounds.size.x + 0.2f, text.textBounds.size.y + 0.2f, 1f) : Vector3.zero);

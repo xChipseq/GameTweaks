@@ -4,14 +4,14 @@ using MiraAPI.Events;
 using MiraAPI.Events.Vanilla.Player;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
-using TownOfUs.Modules.Localization;
+using MiraAPI.Translation;
 using UnityEngine;
 
 namespace GameTweaks.Tweaks;
 
 public sealed class HauntedHouseTweak : AbstractGameTweak
 {
-    public override string Name => TouLocale.Get("TweakHauntedHouse");
+    public override string Name => MiraLocaleManager.Get("TweakHauntedHouse");
     public override Color Color => TweakPalette.HauntedHouseColor;
     public override bool IsEnabled() => OptionGroupSingleton<TweaksOptions>.Instance.HauntedHouseTweak;
 

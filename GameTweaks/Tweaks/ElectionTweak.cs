@@ -7,14 +7,14 @@ using MiraAPI.Events.Vanilla.Meeting;
 using MiraAPI.Events.Vanilla.Meeting.Voting;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
-using TownOfUs.Modules.Localization;
+using MiraAPI.Translation;
 using UnityEngine;
 
 namespace GameTweaks.Tweaks;
 
 public sealed class ElectionTweak : AbstractGameTweak
 {
-    public override string Name => TouLocale.Get("TweakElection");
+    public override string Name => MiraLocaleManager.Get("TweakElection");
     public override Color Color => TweakPalette.ElectionColor;
     public override bool IsEnabled() => OptionGroupSingleton<TweaksOptions>.Instance.ElectionTweak;
 

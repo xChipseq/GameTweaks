@@ -5,7 +5,7 @@
     <string name="TweakTabSideTitle">Tweaks</string>
     <!-- Wiki -->
     <string name="TweakWikiTitle">Game Tweaks</string>
-    <string name="TweakWikiTerms">• \%color=#00FF00\%Anomaly:\%/color\% When the game starts, random tweaks are added to the existing pool. Each one added halves the chance for the next one, but one tweak is always guaranteed. Some tweaks are mutually exclusive.\%nl\%• \%color=#BC095D\%Brutal Crew:\%/color\% Crewmates will not get punished for e.g. executing other crew members as Sheriff.\%nl\%• \%color=#BC5322\%Chat Whispers:\%/color\% Players are able to whisper each other, privately exchanging information. Everyone will see you whispering.\%nl\%• \%color=#001ABC\%Compliant Killers:\%/color\% Neutral Killers work together in a team with their goal of being the last people standing.\%nl\%• \%color=#FFFB85\%Divine Intervention:\%/color\% Each round a random room selected becomes Protected, preventing anyone from attacking in this place.\%nl\%• \%color=#F03AFF\%Don't Fear The Reaper:\%/color\% Players can once use their random role ability after death.\%nl\%• \%color=#FFC725\%Election:\%/color\% During the first meeting, players have 20s to elect a Sovereign. The winner of this voting permanently gains bonus votes based on how many people elected him.\%nl\%• \%color=#7A5835\%Graveyard:\%/color\% When someone dies, their role is revealed to everyone.\%nl\%• \%color=#46FF92\%Haunted House:\%/color\% Everyone is able to see dead players move around.\%nl\%• \%color=#FF1919\%Impostoromicon:\%/color\% Impostors are not able to kill normally anymore. Instead, they vote on who's gonna get the Impostoromicon and gain the ability to kill. Other impostors can only use their side abilities.\%nl\%• \%color=#8519FF\%Live Voting:\%/color\% Votes during a meeting are immediately shown after a vote is cast.\%nl\%• \%color=#FF412F\%Merry Go Round:\%/color\% Each round roles in every team are shuffled. This excludes neutrals.\%nl\%• \%color=#7F7F7F\%No Skip:\%/color\% Meetings cannot be skipped.\%nl\%• \%color=#298B58\%Perfect Crew:\%/color\% When a crewmate is either ejected or executed by another crew member, all crewmates die alongside them.\%nl\%• \%color=#112E6E\%Tactical Deployment:\%/color\% Every round players can choose where they want to spawn on the map, similary to Airship's selection.\%nl\%• \%color=#42ECFF\%VIP:\%/color\% One crew player becomes the VIP, all crewmates need to protect them at all cost. If the VIP gets murdered, the killer's team wins the game. If the VIP is voted out or executed by another crew member, all crewmates die. Some roles and modifiers like Sheriff, Egotist and Lovers cannot be the VIP.</string>
+    <string name="TweakWikiTerms">• [color=#00FF00]Anomaly:[/color] When the game starts, random tweaks are added to the existing pool. Each one added halves the chance for the next one, but one tweak is always guaranteed. Some tweaks are mutually exclusive.[nl]• [color=#BC095D]Brutal Crew:[/color] Crewmates will not get punished for e.g. executing other crew members as Sheriff.[nl]• [color=#BC5322]Chat Whispers:[/color] Players are able to whisper each other, privately exchanging information. Everyone will see you whispering.[nl]• [color=#001ABC]Compliant Killers:[/color] Neutral Killers work together in a team with their goal of being the last people standing.[nl]• [color=#FFFB85]Divine Intervention:[/color] Each round a random room selected becomes Protected, preventing anyone from attacking in this place.[nl]• [color=#F03AFF]Don't Fear The Reaper:[/color] Players can once use their random role ability after death.[nl]• [color=#FFC725]Election:[/color] During the first meeting, players have 20s to elect a Sovereign. The winner of this voting permanently gains bonus votes based on how many people elected him.[nl]• [color=#7A5835]Graveyard:[/color] When someone dies, their role is revealed to everyone.[nl]• [color=#46FF92]Haunted House:[/color] Everyone is able to see dead players move around.[nl]• [color=#FF1919]Impostoromicon:[/color] Impostors are not able to kill normally anymore. Instead, they vote on who's gonna get the Impostoromicon and gain the ability to kill. Other impostors can only use their side abilities.[nl]• [color=#8519FF]Live Voting:[/color] Votes during a meeting are immediately shown after a vote is cast.[nl]• [color=#FF412F]Merry Go Round:[/color] Each round roles in every team are shuffled. This excludes neutrals.[nl]• [color=#7F7F7F]No Skip:[/color] Meetings cannot be skipped.[nl]• [color=#298B58]Perfect Crew:[/color] When a crewmate is either ejected or executed by another crew member, all crewmates die alongside them.[nl]• [color=#112E6E]Tactical Deployment:[/color] Every round players can choose where they want to spawn on the map, similary to Airship's selection.[nl]• [color=#42ECFF]VIP:[/color] One crew player becomes the VIP, all crewmates need to protect them at all cost. If the VIP gets murdered, the killer's team wins the game. If the VIP is voted out or executed by another crew member, all crewmates die. Some roles and modifiers like Sheriff, Egotist and Lovers cannot be the VIP.</string>
     <!-- Game Tweaks -->
     <string name="TweakAnomaly">Anomaly</string>
     <string name="TweakBrutalCrew">Brutal Crew</string>
@@ -25,43 +25,43 @@
     <string name="TweakTacticalDeployment">Tactical Deployment</string>
     <string name="TweakVip">VIP</string>
     <!-- Tweak Options -->
-    <string name="TweakAnomalyOption">\%color=#00FF00\%Anomaly\%/color\%</string>
-    <string name="TweakBrutalCrewOption">\%color=#BC095D\%Brutal Crew\%/color\%</string>
-    <string name="TweakChatWhispersOption">\%color=#BC5322\%Chat Whispers\%/color\%</string>
-    <string name="TweakCompliantKillersOption">\%color=#001ABC\%Compliant Killers\%/color\%</string>
-    <string name="TweakDivineInterventionOption">\%color=#FFFB85\%Divine Intervention\%/color\%</string>
-    <string name="TweakDontFearTheReaperOption">\%color=#F03AFF\%Don't Fear The Reaper\%/color\%</string>
-    <string name="TweakElectionOption">\%color=#FFC725\%Election\%/color\%</string>
-    <string name="TweakGraveyardOption">\%color=#7A5835\%Graveyard\%/color\%</string>
-    <string name="TweakHauntedHouseOption">\%color=#46FF92\%Haunted House\%/color\%</string>
-    <string name="TweakImpostoromiconOption">\%color=#FF1919\%Impostoromicon\%/color\%</string>
-    <string name="TweakKeepingThemBusyOption">\%color=#FF914B\%Keeping Them Busy\%/color\%</string>
-    <string name="TweakLiveVotingOption">\%color=#8519FF\%Live Voting\%/color\%</string>
-    <string name="TweakMerryGoRoundOption">\%color=#FF412F\%Merry Go Round\%/color\%</string>
-    <string name="TweakNoSkipOption">\%color=#7F7F7F\%No Skip\%/color\%</string>
-    <string name="TweakPerfectCrewOption">\%color=#298B58\%Perfect Crew\%/color\%</string>
-    <string name="TweakTacticalDeploymentOption">\%color=#112E6E\%Tactical Deployment\%/color\%</string>
-    <string name="TweakVipOption">\%color=#42ECFF\%VIP\%/color\%</string>
+    <string name="TweakAnomalyOption">[color=#00FF00]Anomaly[/color]</string>
+    <string name="TweakBrutalCrewOption">[color=#BC095D]Brutal Crew[/color]</string>
+    <string name="TweakChatWhispersOption">[color=#BC5322]Chat Whispers[/color]</string>
+    <string name="TweakCompliantKillersOption">[color=#001ABC]Compliant Killers[/color]</string>
+    <string name="TweakDivineInterventionOption">[color=#FFFB85]Divine Intervention[/color]</string>
+    <string name="TweakDontFearTheReaperOption">[color=#F03AFF]Don't Fear The Reaper[/color]</string>
+    <string name="TweakElectionOption">[color=#FFC725]Election[/color]</string>
+    <string name="TweakGraveyardOption">[color=#7A5835]Graveyard[/color]</string>
+    <string name="TweakHauntedHouseOption">[color=#46FF92]Haunted House[/color]</string>
+    <string name="TweakImpostoromiconOption">[color=#FF1919]Impostoromicon[/color]</string>
+    <string name="TweakKeepingThemBusyOption">[color=#FF914B]Keeping Them Busy[/color]</string>
+    <string name="TweakLiveVotingOption">[color=#8519FF]Live Voting[/color]</string>
+    <string name="TweakMerryGoRoundOption">[color=#FF412F]Merry Go Round[/color]</string>
+    <string name="TweakNoSkipOption">[color=#7F7F7F]No Skip[/color]</string>
+    <string name="TweakPerfectCrewOption">[color=#298B58]Perfect Crew[/color]</string>
+    <string name="TweakTacticalDeploymentOption">[color=#112E6E]Tactical Deployment[/color]</string>
+    <string name="TweakVipOption">[color=#42ECFF]VIP[/color]</string>
     <!-- Text used by Whispers -->
     <string name="TweakChatWhispersCmdTitle">Whispers</string>
-    <string name="TweakChatWhispersFrom">Whisper from \%name\%</string>
-    <string name="TweakChatWhispersTo">Whisper to \%name\%</string>
-    <string name="TweakChatWhispersNotification">\%source\% is whispering to \%target\%</string>
-    <string name="TweakChatWhispersHelp">You can use the \%b\%/whisper\%/b\% and \%b\%/w\%/b\% commands to privately message someone. Note that others will see you whispering! Use \%b\%/whelp\%/b\% for more information</string>
-    <string name="TweakChatWhispersHelpCmd">Use \%b\%/whisper\%/b\% or \%b\%/w\%/b\% to privately message someone.\%nl\%\%b\% /whisper {player} {message} \%/b\%\%nl\%Others will know that you whispered your target player.\%nl\%You can also use the player's number in the player argument - it follows the order of their nameplate during a meeting.</string>
+    <string name="TweakChatWhispersFrom">Whisper from [name]</string>
+    <string name="TweakChatWhispersTo">Whisper to [name]</string>
+    <string name="TweakChatWhispersNotification">[source] is whispering to [target]</string>
+    <string name="TweakChatWhispersHelp">You can use the [b]/whisper[/b] and [b]/w[/b] commands to privately message someone. Note that others will see you whispering! Use [b]/whelp[/b] for more information</string>
+    <string name="TweakChatWhispersHelpCmd">Use [b]/whisper[/b] or [b]/w[/b] to privately message someone.[nl][b] /whisper {player} {message} [/b][nl]Others will know that you whispered your target player.[nl]You can also use the player's number in the player argument - it follows the order of their nameplate during a meeting.</string>
     <string name="TweakChatWhispersCmdError">Invalid number of arguments, command should follow: /whisper {player} {message}.</string>
-    <string name="TweakChatWhispersCmdNumError">Player \%b\%\%num\%\%/b\% does not exist. Numbers follow the order of nameplates during a meeting!</string>
-    <string name="TweakChatWhispersCmdNotFoundError">Player \%b\%\%player\%\%/b\% does not exist.</string>
+    <string name="TweakChatWhispersCmdNumError">Player [b][num][/b] does not exist. Numbers follow the order of nameplates during a meeting!</string>
+    <string name="TweakChatWhispersCmdNotFoundError">Player [b][player][/b] does not exist.</string>
     <string name="TweakChatWhispersCmdWhisperYourself">You cannot whisper yourself. That would be weird.</string>
-    <string name="TweakChatWhispersCmdWhisperDead">Player \%b\%\%player\%\%/b\% is dead. Whispering a ghost sure works, but they probably won't be able to whisper you back.</string>
+    <string name="TweakChatWhispersCmdWhisperDead">Player [b][player][/b] is dead. Whispering a ghost sure works, but they probably won't be able to whisper you back.</string>
     <!-- Text used by Election -->
-    <string name="TweakElectionTimer">Election ends in: \%timer\%s\%nl\%Player with the most votes wins.</string>
-    <string name="TweakElectionWin">\%player\% was elected as the Sovereign with \%votes\% votes!</string>
-    <stirng name="TweakElectionSovereignDesc">You've been elected as the Sovereign, permanently gaining +\%votes\% votes!</stirng>
+    <string name="TweakElectionTimer">Election ends in: [timer]s[nl]Player with the most votes wins.</string>
+    <string name="TweakElectionWin">[player] was elected as the Sovereign with [votes] votes!</string>
+    <string name="TweakElectionSovereignDesc">You've been elected as the Sovereign, permanently gaining +[votes] votes!</string>
     <!-- Text used by Impostoromicon -->
-    <string name="TweakImpostoromiconVoteThemself">\%player\% has voted to pass the Impostoromicon to themselves.</string>
-    <string name="TweakImpostoromiconVoteMate">\%voter\% has voted to pass the Impostoromicon to %\player\%.</string>
-    <string name="TweakImpostoromiconGain">\%player\% now possesses the Impostoromicon, giving them ability to kill!</string>
+    <string name="TweakImpostoromiconVoteThemself">[player] has voted to pass the Impostoromicon to themselves.</string>
+    <string name="TweakImpostoromiconVoteMate">[voter] has voted to pass the Impostoromicon to [player].</string>
+    <string name="TweakImpostoromiconGain">[player] now possesses the Impostoromicon, giving them ability to kill!</string>
     <!-- Text used by VIP -->
     <string name="TweakVipModifier">(VIP)</string>
     <string name="TweakVipModifierDesc">You are a very important bean, the crew needs you alive.</string>

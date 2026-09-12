@@ -10,6 +10,7 @@ using MiraAPI.Events.Vanilla.Player;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 using MiraAPI.Roles;
+using MiraAPI.Translation;
 using MiraAPI.Voting;
 using Reactor.Utilities.Extensions;
 using TMPro;
@@ -23,7 +24,7 @@ namespace GameTweaks.Tweaks;
 
 public sealed class LiveVotingTweak : AbstractGameTweak
 {
-    public override string Name => TouLocale.Get("TweakLiveVoting");
+    public override string Name => MiraLocaleManager.Get("TweakLiveVoting");
     public override Color Color => TweakPalette.LiveVotingColor;
     public override bool IsEnabled() => OptionGroupSingleton<TweaksOptions>.Instance.LiveVotingTweak;
 
@@ -75,7 +76,7 @@ public sealed class LiveVotingTweak : AbstractGameTweak
         var hud = MeetingHud.Instance;
         var state = target == TweakHelpers.SkipVoteId
             ? hud.SkippedVoting.transform
-            : hud.playerStates.FirstOrDefault(x => x.TargetPlayerId == target)!.transform;
+            : hud.playerStates.FirstOrDefault(x => x.PlayerId == target)!.transform;
         if (state == null)
         {
             return;
@@ -126,7 +127,7 @@ public sealed class LiveVotingTweak : AbstractGameTweak
         {
             var pva = target == TweakHelpers.SkipVoteId
                 ? MeetingHud.Instance.SkipVoteButton
-                : MeetingHud.Instance.playerStates.FirstOrDefault(x => x.TargetPlayerId == target);
+                : MeetingHud.Instance.playerStates.FirstOrDefault(x => x.PlayerId == target);
             if (pva == null)
                 continue;
             var spreader = target == TweakHelpers.SkipVoteId

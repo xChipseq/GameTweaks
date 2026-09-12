@@ -7,15 +7,15 @@ using MiraAPI.Events.Vanilla.Meeting;
 using MiraAPI.Events.Vanilla.Player;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
+using MiraAPI.Translation;
 using TownOfUs.Modules;
-using TownOfUs.Modules.Localization;
 using UnityEngine;
 
 namespace GameTweaks.Tweaks;
 
 public sealed class GraveyardTweak : AbstractGameTweak
 {
-    public override string Name => TouLocale.Get("TweakGraveyard");
+    public override string Name => MiraLocaleManager.Get("TweakGraveyard");
     public override Color Color => TweakPalette.GraveyardColor;
     public override bool IsEnabled() => OptionGroupSingleton<TweaksOptions>.Instance.GraveyardTweak;
 
