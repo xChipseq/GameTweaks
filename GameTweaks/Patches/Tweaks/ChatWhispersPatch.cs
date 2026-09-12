@@ -82,7 +82,7 @@ public static class ChatWhispersPatch
             var states = MeetingHud.Instance.playerStates.ToArray();
             var sorted = states // snippet from au's source that sorts buttons (the states array isnt actually sorted)
                 .OrderBy(p => !p.AmDead ? 0 : 50)
-                .ThenBy(p => p.PlayerId).ToArray<PlayerVoteArea>();
+                .ThenBy(p => p.PlayerId.Value).ToArray<PlayerVoteArea>();
 
             if (number > states.Length)
             {

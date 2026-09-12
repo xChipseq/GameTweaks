@@ -120,12 +120,11 @@ public static class TweakHelpers
         {
             return;
         }
-
         var pooledBubble = chat.GetPooledBubble();
-        pooledBubble.SetCosmetics(source);
         pooledBubble.transform.SetParent(chat.scroller.Inner);
         pooledBubble.transform.localScale = Vector3.one;
         pooledBubble.SetNotification();
+        pooledBubble.SetCosmetics(source);
         pooledBubble.SetName(text, false, false, TweakPalette.ChatWhispersColor);
         pooledBubble.SetText(string.Empty);
         pooledBubble.AlignChildren();
@@ -139,9 +138,42 @@ public static class TweakHelpers
         {
             chat.notificationRoutine = chat.StartCoroutine(chat.BounceDot());
         }
-        if (source.Object != PlayerControl.LocalPlayer)
+        if (!source.AmOwner)
         {
-            SoundManager.Instance.PlaySound(chat.messageSound, false).pitch = 0.5f + source.PlayerId / 15f;
+            SoundManager.Instance.PlaySound(chat.messageSound, loop: false).pitch = 0.5f + source.PlayerId / 15f;
         }
+        
+        // var chat = HudManager.Instance?.Chat;
+        // if (chat == null)
+        // {
+        //     return;
+        // }
+        // if (source == null)
+        // {
+        //     return;
+        // }
+        //
+        // var pooledBubble = chat.GetPooledBubble();
+        // pooledBubble.SetCosmetics(source);
+        // pooledBubble.transform.SetParent(chat.scroller.Inner);
+        // pooledBubble.transform.localScale = Vector3.one;
+        // pooledBubble.SetNotification();
+        // pooledBubble.SetName(text, false, false, TweakPalette.ChatWhispersColor);
+        // pooledBubble.SetText(string.Empty);
+        // pooledBubble.AlignChildren();
+        // chat.AlignAllBubbles();
+        // if (altColors)
+        // {
+        //     pooledBubble.Background.color = Color.black;
+        //     pooledBubble.TextArea.color = Color.white;
+        // }
+        // if (!chat.IsOpenOrOpening && chat.notificationRoutine == null)
+        // {
+        //     chat.notificationRoutine = chat.StartCoroutine(chat.BounceDot());
+        // }
+        // if (source.Object != PlayerControl.LocalPlayer)
+        // {
+        //     SoundManager.Instance.PlaySound(chat.messageSound, false).pitch = 0.5f + source.PlayerId / 15f;
+        // }
     }
 }

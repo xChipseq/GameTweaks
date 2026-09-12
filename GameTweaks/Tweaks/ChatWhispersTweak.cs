@@ -25,7 +25,10 @@ public sealed class ChatWhispersTweak : AbstractGameTweak
         var msg = MiraLocaleManager.Get("TweakChatWhispersNotification")
             .Replace("<source>", source.Data.PlayerName)
             .Replace("<target>", target.Data.PlayerName);
-        TweakHelpers.SendCustomChatNote(source.Data, msg, true);
+        // TODO: Chat notes broke for some unknown reason, so we're temporarily using a message 
+        //TweakHelpers.SendCustomChatNote(source.Data, msg, true);
+        if (!source.AmOwner && !target.AmOwner)
+            MiscUtils.AddFakeChat(source.Data, MiraLocaleManager.Get("TweakChatWhispersCmdTitle"), msg, altColors: true);
         if (!source.AmOwner && !target.AmOwner)
         {
             return;
